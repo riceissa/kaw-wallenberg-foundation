@@ -19,4 +19,4 @@ for year in range(2011, 2017 + 1):
         data.append(j)
 
 with open("currency-data.json", "w") as f:
-    json.dump(data, f)
+    json.dump(data, f, indent=4)
