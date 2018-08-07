@@ -57,6 +57,14 @@ def print_sql(grants_generator):
     for grant in grants_generator:
         if first:
             print(insert_stmt)
+        notes = []
+        if grant["project"]:
+            notes.append("project: " + grant["project"])
+        if grant["period"]:
+            notes.append("grant period: " + grant["period"])
+        notes_str = "; ".join(notes)
+        if notes_str:
+            notes_str = notes_str[0].upper() + notes_str[1:]
         print(("    " if first else "    ,") + "(" + ",".join([
             mysql_quote("Knut and Alice Wallenberg Foundation"),  # donor
             mysql_quote(grant["institution"]),  # donee
@@ -68,7 +76,7 @@ def print_sql(grants_generator):
             mysql_quote(grant["focus_area"]),  # cause_area
             mysql_quote("https://kaw.wallenberg.org/en/research-projects-" + grant["year"]),  # url
             mysql_quote(""),  # donor_cause_area_url
-            mysql_quote(""),  # notes
+            mysql_quote(notes_str),  # notes
             str(grant["sek_amount"]),  # amount_original_currency
             mysql_quote("SEK"),  # original_currency
             mysql_quote(grant["donation_date"]),  # currency_conversion_date
