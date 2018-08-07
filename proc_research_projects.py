@@ -53,26 +53,27 @@ def main():
 
 
 def grant_to_sql(grants_generator):
-    insert_stmt = """insert into donations (donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, amount_original_currency, original_currency, currency_conversion_date, currency_conversion_basis) values"""
+    insert_stmt = """insert into donations (donor, donee, donation_earmark, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, amount_original_currency, original_currency, currency_conversion_date, currency_conversion_basis) values"""
     first = True
     for grant in grants_generator:
         if first:
             print(insert_stmt)
         print(("    " if first else "    ,") + "(" + ",".join([
             mysql_quote("Knut and Alice Wallenberg Foundation"),  # donor
-            ,  # donee
-            ,  # amount
-            ,  # donation_date
-            ,  # donation_date_precision
-            ,  # donation_date_basis
-            ,  # cause_area
-            ,  # url
-            ,  # donor_cause_area_url
-            ,  # notes
-            ,  # amount_original_currency
-            ,  # original_currency
-            ,  # currency_conversion_date
-            ,  # currency_conversion_basis
+            mysql_quote(grant["institution"]),  # donee
+            mysql_quote(grant["investigator"]),  # donation_earmark
+            mysql_quote(grant["usd_amount"]),  # amount
+            mysql_quote(grant["donation_date"]),  # donation_date
+            mysql_quote("year"),  # donation_date_precision
+            mysql_quote("donation log"),  # donation_date_basis
+            mysql_quote(grant["focus_area"]),  # cause_area
+            mysql_quote("https://kaw.wallenberg.org/en/research-projects-" + grant["year"]),  # url
+            mysql_quote(""),  # donor_cause_area_url
+            mysql_quote(""),  # notes
+            mysql_quote(grant["sek_amount"]),  # amount_original_currency
+            mysql_quote("SEK"),  # original_currency
+            mysql_quote(grant["donation_date"]),  # currency_conversion_date
+            mysql_quote("Fixer.io"),  # currency_conversion_basis
         ]) + ")")
         first = False
     if not first:
@@ -187,6 +188,7 @@ def soup_to_grants(soup, year):
                "institution": institution,
                "focus_area": focus_area,
                "donation_date": year + "-01-01",
+               "year": year,
                "period": period}
 
 
