@@ -61,6 +61,14 @@ def soup_to_grants(soup, year):
         else:
             raise ValueError("We don't know this project format.")
 
+        m = re.match(r"(?:Project|Projekt):[ ]?[“”]([^“”]+)[“”]", project_title)
+        if m:
+            project_title = m.group(1)
+        else:
+            m = re.match(r"Project: (.*)", project_title)
+            if m:
+                project_title = m.group(1)
+
         amount = None
         period = None
         m = re.search(r"SEK[ ]?([0-9 ,]+)", amount_part)
