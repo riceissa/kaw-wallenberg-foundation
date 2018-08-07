@@ -1,0 +1,926 @@
+[
+    {
+        "success": true,
+        "timestamp": 1295135999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2011-01-15",
+        "rates": {
+            "USD": 1.336872,
+            "SEK": 8.946254
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1297814399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2011-02-15",
+        "rates": {
+            "USD": 1.349251,
+            "SEK": 8.729736
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1300233599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2011-03-15",
+        "rates": {
+            "USD": 1.396449,
+            "SEK": 8.993702
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1302911999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2011-04-15",
+        "rates": {
+            "USD": 1.443491,
+            "SEK": 8.947161
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1305503999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2011-05-15",
+        "rates": {
+            "USD": 1.419497,
+            "SEK": 9.009177
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1308182399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2011-06-15",
+        "rates": {
+            "USD": 1.420729,
+            "SEK": 9.138307
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1310774399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2011-07-15",
+        "rates": {
+            "USD": 1.415008,
+            "SEK": 9.199539
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1313452799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2011-08-15",
+        "rates": {
+            "USD": 1.442406,
+            "SEK": 9.294999
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1316131199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2011-09-15",
+        "rates": {
+            "USD": 1.385834,
+            "SEK": 9.192239
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1318723199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2011-10-15",
+        "rates": {
+            "USD": 1.384217,
+            "SEK": 9.144552
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1321401599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2011-11-15",
+        "rates": {
+            "USD": 1.351868,
+            "SEK": 9.121578
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1323993599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2011-12-15",
+        "rates": {
+            "USD": 1.301583,
+            "SEK": 9.07307
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1326671999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2012-01-15",
+        "rates": {
+            "USD": 1.272507,
+            "SEK": 8.879276
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1329350399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2012-02-15",
+        "rates": {
+            "USD": 1.307865,
+            "SEK": 8.778527
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1331855999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2012-03-15",
+        "rates": {
+            "USD": 1.307699,
+            "SEK": 8.915273
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1334534399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2012-04-15",
+        "rates": {
+            "USD": 1.310587,
+            "SEK": 8.889126
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1337126399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2012-05-15",
+        "rates": {
+            "USD": 1.276179,
+            "SEK": 9.050877
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1339804799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2012-06-15",
+        "rates": {
+            "USD": 1.263161,
+            "SEK": 8.845557
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1342396799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2012-07-15",
+        "rates": {
+            "USD": 1.224798,
+            "SEK": 8.610883
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1345075199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2012-08-15",
+        "rates": {
+            "USD": 1.228627,
+            "SEK": 8.222603
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1347753599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2012-09-15",
+        "rates": {
+            "USD": 1.312574,
+            "SEK": 8.607089
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1350345599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2012-10-15",
+        "rates": {
+            "USD": 1.295067,
+            "SEK": 8.638792
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1353023999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2012-11-15",
+        "rates": {
+            "USD": 1.277364,
+            "SEK": 8.645015
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1355615999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2012-12-15",
+        "rates": {
+            "USD": 1.316087,
+            "SEK": 8.785873
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1358294399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2013-01-15",
+        "rates": {
+            "USD": 1.332039,
+            "SEK": 8.636569
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1360972799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2013-02-15",
+        "rates": {
+            "USD": 1.336713,
+            "SEK": 8.445907
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1363391999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2013-03-15",
+        "rates": {
+            "USD": 1.306206,
+            "SEK": 8.371258
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1366070399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2013-04-15",
+        "rates": {
+            "USD": 1.3049,
+            "SEK": 8.355678
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1368662399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2013-05-15",
+        "rates": {
+            "USD": 1.290762,
+            "SEK": 8.585465
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1371340799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2013-06-15",
+        "rates": {
+            "USD": 1.334301,
+            "SEK": 8.596974
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1373932799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2013-07-15",
+        "rates": {
+            "USD": 1.305486,
+            "SEK": 8.714019
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1376611199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2013-08-15",
+        "rates": {
+            "USD": 1.333815,
+            "SEK": 8.682086
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1379289599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2013-09-15",
+        "rates": {
+            "USD": 1.33603,
+            "SEK": 8.719798
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1381881599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2013-10-15",
+        "rates": {
+            "USD": 1.352977,
+            "SEK": 8.775313
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1384559999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2013-11-15",
+        "rates": {
+            "USD": 1.349597,
+            "SEK": 8.959634
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1387151999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2013-12-15",
+        "rates": {
+            "USD": 1.373472,
+            "SEK": 9.032009
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1389830399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2014-01-15",
+        "rates": {
+            "USD": 1.360461,
+            "SEK": 8.803209
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1392508799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2014-02-15",
+        "rates": {
+            "USD": 1.36934,
+            "SEK": 8.825827
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1394927999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2014-03-15",
+        "rates": {
+            "USD": 1.391153,
+            "SEK": 8.885401
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1397606399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2014-04-15",
+        "rates": {
+            "USD": 1.381437,
+            "SEK": 9.073357
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1400198399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2014-05-15",
+        "rates": {
+            "USD": 1.371261,
+            "SEK": 9.002852
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1402876799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2014-06-15",
+        "rates": {
+            "USD": 1.353438,
+            "SEK": 8.997786
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1405468799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2014-07-15",
+        "rates": {
+            "USD": 1.356828,
+            "SEK": 9.245871
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1408147199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2014-08-15",
+        "rates": {
+            "USD": 1.339949,
+            "SEK": 9.165942
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1410825599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2014-09-15",
+        "rates": {
+            "USD": 1.293701,
+            "SEK": 9.211797
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1413417599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2014-10-15",
+        "rates": {
+            "USD": 1.282115,
+            "SEK": 9.191062
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1416095999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2014-11-15",
+        "rates": {
+            "USD": 1.252405,
+            "SEK": 9.261778
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1418687999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2014-12-15",
+        "rates": {
+            "USD": 1.244063,
+            "SEK": 9.476046
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1421366399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2015-01-15",
+        "rates": {
+            "USD": 1.162712,
+            "SEK": 9.412836
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1424044799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2015-02-15",
+        "rates": {
+            "USD": 1.1397,
+            "SEK": 9.589142
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1426463999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2015-03-15",
+        "rates": {
+            "USD": 1.04921,
+            "SEK": 9.149861
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1429142399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2015-04-15",
+        "rates": {
+            "USD": 1.067623,
+            "SEK": 9.333138
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1431734399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2015-05-15",
+        "rates": {
+            "USD": 1.143394,
+            "SEK": 9.372406
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1434326399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2015-06-15",
+        "rates": {
+            "USD": 1.127782,
+            "SEK": 9.216302
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1436918399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2015-07-15",
+        "rates": {
+            "USD": 1.094926,
+            "SEK": 9.31305
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1439596799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2015-08-15",
+        "rates": {
+            "USD": 1.111006,
+            "SEK": 9.446193
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1442275199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2015-09-15",
+        "rates": {
+            "USD": 1.127006,
+            "SEK": 9.345482
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1444953599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2015-10-15",
+        "rates": {
+            "USD": 1.137731,
+            "SEK": 9.343141
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1447631999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2015-11-15",
+        "rates": {
+            "USD": 1.07478,
+            "SEK": 9.348106
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1450223999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2015-12-15",
+        "rates": {
+            "USD": 1.092913,
+            "SEK": 9.297661
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1452902399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2016-01-15",
+        "rates": {
+            "USD": 1.091372,
+            "SEK": 9.354407
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1455580799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2016-02-15",
+        "rates": {
+            "USD": 1.115905,
+            "SEK": 9.452897
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1458086399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2016-03-15",
+        "rates": {
+            "USD": 1.110731,
+            "SEK": 9.242836
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1460764799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2016-04-15",
+        "rates": {
+            "USD": 1.128379,
+            "SEK": 9.176264
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1463356799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2016-05-15",
+        "rates": {
+            "USD": 1.130411,
+            "SEK": 9.320875
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1466035199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2016-06-15",
+        "rates": {
+            "USD": 1.126379,
+            "SEK": 9.351174
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1468627199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2016-07-15",
+        "rates": {
+            "USD": 1.103704,
+            "SEK": 9.461504
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1471305599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2016-08-15",
+        "rates": {
+            "USD": 1.118442,
+            "SEK": 9.460394
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1473983999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2016-09-15",
+        "rates": {
+            "USD": 1.1248,
+            "SEK": 9.538147
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1476575999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2016-10-15",
+        "rates": {
+            "USD": 1.097208,
+            "SEK": 9.691424
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1479254399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2016-11-15",
+        "rates": {
+            "USD": 1.072499,
+            "SEK": 9.852016
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1481846399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2016-12-15",
+        "rates": {
+            "USD": 1.041988,
+            "SEK": 9.799382
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1484524799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2017-01-15",
+        "rates": {
+            "USD": 1.063271,
+            "SEK": 9.490139
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1487203199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2017-02-15",
+        "rates": {
+            "USD": 1.060417,
+            "SEK": 9.460126
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1489622399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2017-03-15",
+        "rates": {
+            "USD": 1.074001,
+            "SEK": 9.531162
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1492300799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2017-04-15",
+        "rates": {
+            "USD": 1.061454,
+            "SEK": 9.572138
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1494892799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2017-05-15",
+        "rates": {
+            "USD": 1.098296,
+            "SEK": 9.694106
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1497571199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2017-06-15",
+        "rates": {
+            "USD": 1.114946,
+            "SEK": 9.756015
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1500163199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2017-07-15",
+        "rates": {
+            "USD": 1.146736,
+            "SEK": 9.517509
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1502841599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2017-08-15",
+        "rates": {
+            "USD": 1.174395,
+            "SEK": 9.477957
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1505519999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2017-09-15",
+        "rates": {
+            "USD": 1.19488,
+            "SEK": 9.506948
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1508111999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2017-10-15",
+        "rates": {
+            "USD": 1.181748,
+            "SEK": 9.592393
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1510790399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2017-11-15",
+        "rates": {
+            "USD": 1.178552,
+            "SEK": 9.93498
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1513382399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2017-12-15",
+        "rates": {
+            "USD": 1.175221,
+            "SEK": 10.00548
+        }
+    }
+]
