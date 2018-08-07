@@ -37,8 +37,7 @@ def main():
             year = filepath.split("/")[-1][len("research-projects-"):-len(".html")]
             soup = BeautifulSoup(f, "lxml")
             for grant in soup_to_grants(soup, year):
-                if grant["investigator"] is None:
-                    print(grant, file=sys.stderr)
+                print(grant)
 
 
 def soup_to_grants(soup, year):
@@ -104,6 +103,10 @@ def soup_to_grants(soup, year):
             heading = item.find("h2")
             project_title = heading.strong.extract().text.strip()
             institution = heading.text.strip()
+            investigator = ""
+        elif year == "2011" and project_title == "The SGC project, Karolinska Institutet":
+            project_title = "The SGC project"
+            institution = "Karolinska Institutet"
             investigator = ""
 
         amount = None
