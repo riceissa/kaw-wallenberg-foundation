@@ -30,6 +30,18 @@ def sek_to_usd(sek_amount, year):
     return total / count
 
 
+def mysql_quote(x):
+    """Quote the string x using MySQL quoting rules. If x is the empty string,
+    return "NULL". Probably not safe against maliciously formed strings, but
+    our input is fixed and from a basically trustable source."""
+    if not x:
+        return "NULL"
+    x = x.replace("\\", "\\\\")
+    x = x.replace("'", "''")
+    x = x.replace("\n", "\\n")
+    return "'{}'".format(x)
+
+
 def main():
     for filepath in sorted(glob.glob(sys.argv[1] + "/*")):
         with open(filepath, "r") as f:
@@ -38,6 +50,35 @@ def main():
             soup = BeautifulSoup(f, "lxml")
             for grant in soup_to_grants(soup, year):
                 print(grant)
+
+
+def grant_to_sql(grants_generator):
+    insert_stmt = """insert into donations (donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, amount_original_currency, original_currency, currency_conversion_date, currency_conversion_basis) values"""
+    first = True
+    for grant in grants_generator:
+        if first:
+            print(insert_stmt)
+        print(("    " if first else "    ,") + "(" + ",".join([
+            mysql_quote("Knut and Alice Wallenberg Foundation"),  # donor
+            ,  # donee
+            ,  # amount
+            ,  # donation_date
+            ,  # donation_date_precision
+            ,  # donation_date_basis
+            ,  # cause_area
+            ,  # url
+            ,  # donor_cause_area_url
+            ,  # notes
+            ,  # amount_original_currency
+            ,  # original_currency
+            ,  # currency_conversion_date
+            ,  # currency_conversion_basis
+        ]) + ")")
+        first = False
+    if not first:
+        # If first is still true, that means we printed nothing above,
+        # so no need to print the semicolon
+        print(";")
 
 
 def soup_to_grants(soup, year):
