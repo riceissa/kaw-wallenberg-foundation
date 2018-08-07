@@ -4,8 +4,30 @@ from bs4 import BeautifulSoup
 import glob
 import sys
 import re
+import json
 
 import pdb
+
+
+with open("currency-data.json", "r") as f:
+    CURRENCY_TABLE = json.load(f)
+
+
+def sek_to_usd(sek_amount, year):
+    count = 0
+    total = 0
+    for conv in CURRENCY_TABLE:
+        if conv["date"].startswith(str(year)):
+            count += 1
+            # Since the free version of Fixer.io only supports EUR as the base
+            # currency, we have to first convert to EUR, then to USD
+            eur_amount = sek_amount / conv["rates"]["SEK"]
+            usd_amount = eur_amount * conv["rates"]["USD"]
+            total += usd_amount
+    assert count == 12
+    # Now we have mid-month estimates for each month of the year, so return the
+    # average
+    return total / count
 
 
 def main():
@@ -100,7 +122,8 @@ def soup_to_grants(soup, year):
 
         assert period is not None
 
-        yield {"amount": amount, "project": project_title,
+        yield {"sek_amount": amount, "usd_amount": sek_to_usd(amount, int(year)),
+               "project": project_title,
                "investigator": investigator_part,
                "focus_area": find_focus_area(item),
                "donation_date": year + "-01-01",
