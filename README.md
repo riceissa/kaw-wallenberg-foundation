@@ -49,6 +49,9 @@ These are the grants listed on the following pages:
 * https://kaw.wallenberg.org/en/earlier-grants
 * https://kaw.wallenberg.org/en/infrastructure-national-importance-2012-2014
 
+Also, check https://kaw.wallenberg.org/en/grants because there might be
+more stray grant pages in the future.
+
 Since the data format for these is messy and not standardized,
 you will need to manually collect the data and store it in
 `manual_data.tsv`. The format for the TSV is tab-separated values
