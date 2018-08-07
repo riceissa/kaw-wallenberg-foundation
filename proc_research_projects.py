@@ -37,7 +37,8 @@ def main():
             year = filepath.split("/")[-1][len("research-projects-"):-len(".html")]
             soup = BeautifulSoup(f, "lxml")
             for grant in soup_to_grants(soup, year):
-                print(grant)
+                if grant["investigator"] is None:
+                    print(grant, file=sys.stderr)
 
 
 def soup_to_grants(soup, year):
@@ -50,6 +51,8 @@ def soup_to_grants(soup, year):
         # Remove no-break space
         project_title = project_title.replace("\u00a0", " ")
         amount_investigator = amount_investigator.replace("\u00a0", " ")
+
+        focus_area = find_focus_area(item)
 
         if ("Grant:" in amount_investigator and
             ("Principal Investigator:" in amount_investigator or
@@ -91,6 +94,18 @@ def soup_to_grants(soup, year):
             if m:
                 project_title = m.group(1)
 
+        investigator = None
+        institution = None
+        m = re.match(r"Principal [Ii]nvestigator: (?:Professor |Associate Professor |Dr\. )?([^,]+), (.*)", investigator_part)
+        if m:
+            investigator = m.group(1)
+            institution = m.group(2)
+        elif year == "2014" and focus_area == "Infrastructure of national importance in Life Science":
+            heading = item.find("h2")
+            project_title = heading.strong.extract().text.strip()
+            institution = heading.text.strip()
+            investigator = ""
+
         amount = None
         period = None
         m = re.search(r"SEK[ ]?([0-9 ,]+)", amount_part)
@@ -124,8 +139,9 @@ def soup_to_grants(soup, year):
 
         yield {"sek_amount": amount, "usd_amount": sek_to_usd(amount, int(year)),
                "project": project_title,
-               "investigator": investigator_part,
-               "focus_area": find_focus_area(item),
+               "investigator": investigator,
+               "institution": institution,
+               "focus_area": focus_area,
                "donation_date": year + "-01-01",
                "period": period}
 
