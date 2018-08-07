@@ -24,7 +24,7 @@ def sek_to_usd(sek_amount, year):
             eur_amount = sek_amount / conv["rates"]["SEK"]
             usd_amount = eur_amount * conv["rates"]["USD"]
             total += usd_amount
-    assert count == 12
+    assert (count == 12 and year < 2018) or (count == 7 and year == 2018)
     # Now we have mid-month estimates for each month of the year, so return the
     # average
     return total / count
