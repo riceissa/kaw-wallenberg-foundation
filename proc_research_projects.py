@@ -48,11 +48,10 @@ def main():
             print("Doing", filepath, file=sys.stderr)
             year = filepath.split("/")[-1][len("research-projects-"):-len(".html")]
             soup = BeautifulSoup(f, "lxml")
-            for grant in soup_to_grants(soup, year):
-                print(grant)
+            print_sql(soup_to_grants(soup, year))
 
 
-def grant_to_sql(grants_generator):
+def print_sql(grants_generator):
     insert_stmt = """insert into donations (donor, donee, donation_earmark, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, amount_original_currency, original_currency, currency_conversion_date, currency_conversion_basis) values"""
     first = True
     for grant in grants_generator:
@@ -62,7 +61,7 @@ def grant_to_sql(grants_generator):
             mysql_quote("Knut and Alice Wallenberg Foundation"),  # donor
             mysql_quote(grant["institution"]),  # donee
             mysql_quote(grant["investigator"]),  # donation_earmark
-            mysql_quote(grant["usd_amount"]),  # amount
+            str(grant["usd_amount"]),  # amount
             mysql_quote(grant["donation_date"]),  # donation_date
             mysql_quote("year"),  # donation_date_precision
             mysql_quote("donation log"),  # donation_date_basis
@@ -70,7 +69,7 @@ def grant_to_sql(grants_generator):
             mysql_quote("https://kaw.wallenberg.org/en/research-projects-" + grant["year"]),  # url
             mysql_quote(""),  # donor_cause_area_url
             mysql_quote(""),  # notes
-            mysql_quote(grant["sek_amount"]),  # amount_original_currency
+            str(grant["sek_amount"]),  # amount_original_currency
             mysql_quote("SEK"),  # original_currency
             mysql_quote(grant["donation_date"]),  # currency_conversion_date
             mysql_quote("Fixer.io"),  # currency_conversion_basis
