@@ -6,11 +6,13 @@ def main():
     print("""insert into donations (donor, donee, donation_earmark, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, amount_original_currency, original_currency, currency_conversion_date, currency_conversion_basis) values""")
     first = True
     with open("manual_data.tsv", "r") as f:
+        next(f)  # skip header row
         for line in f:
             (grant_type, url, start_date, end_date, donee, donation_earmark,
              sek_amount, project, focus_area) = line[:-1].split("\t")
+            sek_amount = float(sek_amount)
             if start_date:
-                usd_amount = sek_to_usd(sek_amount, start_date[:len("YYYY")])
+                usd_amount = sek_to_usd(sek_amount, int(start_date[:len("YYYY")]))
             else:
                 usd_amount = sek_to_usd(sek_amount, 2016)  # TODO change?
             notes = []
@@ -35,7 +37,7 @@ def main():
                 mysql_quote(notes_str),  # notes
                 str(sek_amount),  # amount_original_currency
                 mysql_quote("SEK"),  # original_currency
-                mysql_quote(grant["donation_date"]),  # currency_conversion_date
+                mysql_quote(start_date if start_date else "2016-01-01"),  # currency_conversion_date, TODO change 2016?
                 mysql_quote("Fixer.io"),  # currency_conversion_basis
             ]) + ")")
             first = False
