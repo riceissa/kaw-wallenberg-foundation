@@ -145,13 +145,21 @@ def soup_to_grants(soup, year):
         investigator = None
         institution = None
         m = re.match(r"Principal [Ii]nvestigator: (?:Professor |Associate Professor |Dr\. )?([^,]+), (.*)", investigator_part)
-        if m:
+        if year == "2015" and investigator_part == "Principal investigator: Johanna Rosén, Associate Professor, Linköping University":
+            investigator = "Johanna Rosén"
+            institution = "Linköping University"
+        elif year == "2015" and investigator_part == "Principal investigator: Alexander Dmitriev, Associate Professor, Chalmers University of Technology":
+            investigator = "Alexander Dmitriev"
+            institution = "Chalmers University of Technology"
+        elif m:
             investigator = m.group(1)
             institution = m.group(2)
         elif year == "2014" and focus_area == "Infrastructure of national importance in Life Science":
             heading = item.find("h2")
             project_title = heading.strong.extract().text.strip()
             institution = heading.text.strip()
+            if institution.endswith(","):
+                institution = institution[:-1]
             investigator = ""
         elif year == "2011" and project_title == "The SGC project, Karolinska Institutet":
             project_title = "The SGC project"
