@@ -20,6 +20,8 @@ def main():
                 notes.append("project: " + project)
             if start_year and end_year:
                 notes.append(f"grant period: {start_year} to {end_year}")
+            if not start_year:
+                notes.append("year of grant not given so assuming 2016 for the purpose of currency conversion")
             notes_str = "; ".join(notes)
             if notes_str:
                 notes_str = notes_str[0].upper() + notes_str[1:]
